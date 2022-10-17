@@ -1,0 +1,28 @@
+{
+    "name": "endava-praksa",
+    "version": "1.0.0",
+    "description": "cypress, QA, automation",
+    "scripts": {
+        "test": "cypress run"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/dzaja123/API-test-automation.git"
+    },
+    "keywords": [
+        "API"
+    ],
+    "author": "dzaja123",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/dzaja123/API-test-automation/issues"
+    },
+    "homepage": "https://github.com/dzaja123/API-test-automation#readme",
+    "devDependencies": {
+        "esbuild": "^0.15.10",
+        "multiple-cucumber-html-reporter": "^3.0.1"
+    },
+    "dependencies": {
+        "axios": "^1.1.3"
+    }
+}
