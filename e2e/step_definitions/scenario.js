@@ -32,27 +32,27 @@ function createNewUser(id, username, firstName, lastName, email, password, phone
 }
 
 When('A user creates a new user', () => {
-  createNewUser(12, "Laza123", "Laza", "Maric", "email@gmail.com", "laza", "061123122", 1)
+  createNewUser(12, "Laza123", "Lazar", "Maric", "email@gmail.com", "laza", "061123122", 1)
 
 });
 
-When('A user checks by {username} that the user is created ', (username) => {
-
-
-});
-
-Then('A new user {username} should be created', (username) => {
-
-});
-
-
-When('A user updates email: {email} for the user: {username}', (email, username) => {
+When('A user checks by username {string} that the user is created ', (username) => {
 
 
 });
 
+Then('A new user {string} should be created', (username) => {
 
-Then('A new email: {email} should be updated', (email) => {
+});
+
+
+When('A user updates email: {string} for the user: {string}', (email, username) => {
+
+
+});
+
+
+Then('A new email: {string} should be updated', (email) => {
 
 });
 
@@ -79,13 +79,13 @@ Then('A user should be logged out successsfully', () => {
 });
 
 
-When('A user tries to delete user by {username}', (username) => {
+When('A user tries to delete user by {string}', (username) => {
 
 
 });
 
 
-Then('A user with username: {username} should be deleted', (username) => {
+Then('A user with username: {string} should be deleted', (username) => {
 
 });
  
