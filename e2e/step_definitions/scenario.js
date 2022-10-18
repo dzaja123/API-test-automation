@@ -2,86 +2,61 @@ const {Given, When, Then, And} = require('cucumber');
 const axios = require('axios');
 
 
-When('A creates a new user', () => {
+When('A user creates a new user', () => {
+
+
+});
+
+When('A user checks by {username} that the user is created ', (username) => {
+
+
+});
+
+Then('A new user {username} should be created', (username) => {
+
+});
+
+
+When('A user updates email: {email} for the user: {username}', (email, username) => {
 
 
 });
 
 
-Then('A new user will be added to the database', () => {
+Then('A new email: {email} should be updated', (email) => {
 
 });
 
-
-
-When('A user checks that the user is created correctly', () => {
-
-
-}); 
-
-
-Then('A the data from the database will be correct', () => {
-
-
-}); 
-
-
-When('A user updates his email data', () => {
-
-
-});
-
-
-When('A user verifies that the update was successfull', () => {
-
-
-}); 
-  
-
-Then('A user will be able to see the record', () => {
-
-
-});
-  
 
 When('A user tries to login', () => {
 
 
 });
-  
-
-Then('A user will be loged in successsfully', () => {
 
 
-}); 
-  
+Then('A user should be logged in successsfully', () => {
+
+});
+
 
 When('A user tries to logout', () => {
 
 
 });
-  
-
-Then('A user will be logged out', () => {
 
 
-}); 
-  
+Then('A user should be logged out successsfully', () => {
 
-When('A user tries to delete his account', () => {
-
-
-}); 
-  
-
-When('A user verifies that the account is deleted from the database', () => {
+});
 
 
-}); 
-  
-
-Then('A user will be deleted from the database', () => {
+When('A user tries to delete user by {username}', (username) => {
 
 
 });
-  
+
+
+Then('A user with username: {username} should be deleted', (username) => {
+
+});
+ 

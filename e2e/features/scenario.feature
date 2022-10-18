@@ -16,4 +16,4 @@ Feature: API requests
         Then A user should be logged out successfully
 
         When A user tries to delete user by {username}
-        Then A user should be deleted           
+        Then A user with username: {username} should be deleted       
