@@ -1,4 +1,4 @@
-# API Test Automation using Cypress and Axios
+# API Test Automation using Axios
 
 ## What is Axios?
 Axios is a promise-based HTTP Client for node.js and the browser. 
