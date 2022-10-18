@@ -1,7 +1,9 @@
 Feature: API requests
 
     Testing API requests
-      
+    
+    Scenario:  API tests
+
         When A user creates a new user
         When A user checks by username "Lazar" that the user is created 
         Then A new user "Lazar" should be created
