@@ -1,10 +1,32 @@
 const {Given, When, Then, And} = require('cucumber');
 const axios = require('axios');
 
+const userURL = 'https://petstore.swagger.io/v2/user'
 
+
+function createNewUser(id, username, firstName, lastName, email, password, phone, userStatus) {
+    
+    responce = 
+    axios({
+    method: 'post',
+    url: userUrl,
+    data: {
+        "id": id,
+        "username": username,
+        "firstName": firstName,
+        "lastName": lastName,
+        "email": email,
+        "password": password,
+        "phone": phone,
+        "userStatus": userStatus
+    }
+  });
+
+    return responce
+}
 
 When('A user creates a new user', () => {
-
+  createNewUser(12, "Laza123", "Laza", "Maric", "email@gmail.com", "laza", "061123122", 1)
 
 });
 
