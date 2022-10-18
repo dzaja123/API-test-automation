@@ -6,7 +6,7 @@ const userUrl = 'https://petstore.swagger.io/v2/user'
 
 function createNewUser(id, username, firstName, lastName, email, password, phone, userStatus) {
 
-    axios.post(userUrl, {
+  axios.post(userUrl, {
     "id": id,
     "username": username,
     "firstName": firstName,
@@ -24,13 +24,24 @@ function createNewUser(id, username, firstName, lastName, email, password, phone
   });
 }
 
+function checkUserByUsername(username) {
+
+  axios.get(userUrl + "/" + username)
+  .then(function (response) {
+    console.log(response);
+  })
+  .catch(function (error) {
+    console.log(error);
+  })
+}
+
 When('A user creates a new user', () => {
   createNewUser(12, "Laza123", "Lazar", "Maric", "email@gmail.com", "laza", "061123122", 1)
 
 });
 
 When('A user checks by username {string} that the user is created ', (username) => {
-
+  checkUserByUsername(username)
 
 });
 
