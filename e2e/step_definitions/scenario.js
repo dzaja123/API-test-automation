@@ -1,5 +1,5 @@
 const {Given, When, Then, And} = require('cucumber');
-const axios = require('axios');
+const axios = require('axios').default;
 
 const userURL = 'https://petstore.swagger.io/v2/user'
 
@@ -20,6 +20,12 @@ function createNewUser(id, username, firstName, lastName, email, password, phone
         "phone": phone,
         "userStatus": userStatus
     }
+  })
+  .then(function (response) {
+    console.log(response);
+  })
+  .catch(function (error) {
+    console.log(error);
   });
 
     return responce
