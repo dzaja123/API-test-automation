@@ -1,7 +1,7 @@
 {
   "name": "endava-praksa",
   "version": "1.0.0",
-  "description": "cypress, QA, automation",
+  "description": "cypress, Axios, QA, automation",
   "scripts": {
     "test": "cypress run"
   },
