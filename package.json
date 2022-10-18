@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "cypress, Axios, QA, automation",
   "scripts": {
-    "test": "cypress run"
+    "test": "cucumber-js e2e/features/ -r 2e2/steps/ "
   },
   "repository": {
     "type": "git",
