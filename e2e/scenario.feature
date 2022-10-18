@@ -2,7 +2,7 @@ Feature: API requests
 
     Testing API requests
       
-    Scenario: User create and return a new user 
+    Scenario: User is able create and return a new user 
         When A creates a new user
         Then A new user will be added to the database
 
