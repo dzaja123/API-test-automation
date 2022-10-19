@@ -1,5 +1,4 @@
 const {Given, When, Then, And} = require('cucumber');
-const axios = require('axios').default;
 
 const supportFunctions = require('../../support/supportFunctions');
 
