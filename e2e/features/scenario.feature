@@ -4,7 +4,7 @@ Feature: API requests
     
     Scenario:  API tests
 
-        Given A user creates a new user
+        Given Request for creating new user is sent
         Then A new user "Lazar" should be created
 
         When A user updates email: "testmail@gmail.com" for the user: "Lazar"
