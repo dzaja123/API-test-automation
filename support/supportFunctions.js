@@ -1,6 +1,9 @@
 const axios = require('axios').default;
 const assert = require('assert');
 
+const chai = require('chai');
+const should = chai.should()
+
 const userUrl = 'https://petstore.swagger.io/v2/user'
 
 
@@ -19,10 +22,13 @@ class supportFuctions {
                 "userStatus": data[0].userStatus
             })
             .then(function(response) {
-                assert.equal(response.status, 200)
+                //console.log((response.status).should.be.equal(200))
+                (response.status).should.be.equal(200)
             })
             .catch(function(error) {
-                console.log(error)
+                throw new Error(
+                    `Cannot post, error: ${error.message}}`,
+                );
             })
     }
 
@@ -40,7 +46,9 @@ class supportFuctions {
                 assert(response.data.userStatus, credentials[0].userStatus)
             })
             .catch(function(error) {
-                console.log(error);
+                throw new Error(
+                    `Cannot get, error: ${error.message}}`,
+                );
             })
     }
 
@@ -56,11 +64,14 @@ class supportFuctions {
                 "userStatus": credentials[0].userStatus
             })
             .then(function(response) {
-                assert(response.status, 200)
+                //console.log((response.status).should.be.equal(200))
+                (response.status).should.be.equal(200)
 
             })
             .catch(function(error) {
-                console.log(error);
+                throw new Error(
+                    `Cannot put, error: ${error.message}}`,
+                );
             })
     }
 
@@ -78,7 +89,9 @@ class supportFuctions {
                 assert(response.data.userStatus, credentials[0].userStatus)
             })
             .catch(function(error) {
-                console.log(error);
+                throw new Error(
+                    `Cannot get, error: ${error.message}}`,
+                );
             })
     }
 
@@ -89,30 +102,39 @@ class supportFuctions {
 
         await axios.get(userUrl + "/" + "login?username=" + username + "&" + "password" + "=" + password)
             .then(function(response) {
-                assert(response.status, 200)
+                //console.log((response.status).should.be.equal(200))
+                (response.status).should.be.equal(200)
             })
             .catch(function(error) {
-                console.log(error);
+                throw new Error(
+                    `Cannot get, error: ${error.message}}`,
+                );
             })
     }
 
     async logoutUser() {
         await axios.get(userUrl + "/" + "logout")
             .then(function(response) {
-                assert(response.status, 200)
+                //console.log((response.status).should.be.equal(200))
+                (response.status).should.be.equal(200)
             })
             .catch(function(error) {
-                console.log(error);
+                throw new Error(
+                    `Cannot get, error: ${error.message}}`,
+                );
             })
     }
 
     async deleteUser(username) {
         await axios.delete(userUrl + "/" + username, {})
             .then(function(response) {
-                assert(response.status, 200)
+                //console.log((response.status).should.be.equal(200))
+                (response.status).should.be.equal(200)
             })
             .catch(function(error) {
-                console.log(error);
+                throw new Error(
+                    `Cannot delete, error: ${error.message}}`,
+                );
             })
     }
 }
