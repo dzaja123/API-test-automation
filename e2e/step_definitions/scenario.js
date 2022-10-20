@@ -4,9 +4,9 @@ const supportFunctions = require('../../support/supportFunctions');
 
 let credentials;
 
-Given('Request for creating new user is sent', (dataTable) => {
+Given('Request for creating new user is sent', async(dataTable) => {
     credentials = dataTable.hashes();
-    supportFunctions.createNewUser(dataTable);
+    await supportFunctions.createNewUser(dataTable);
 });
 
 
@@ -16,22 +16,22 @@ Then('A new user {string} should be created', async(username) => {
 });
 
 
-When('A user updates email: {string} for the user: {string}', (email, username) => {
-    supportFunctions.emailUpdate(email, username, credentials);
+When('A user updates email: {string} for the user: {string}', async(email, username) => {
+    await supportFunctions.emailUpdate(email, username, credentials);
 });
 
 
-Then('A new email: {string} should be updated', (email) => {
-    supportFunctions.checkEmailUpdate(email, credentials);
+Then('A new email: {string} should be updated', async(email) => {
+    await supportFunctions.checkEmailUpdate(email, credentials);
 });
 
 
-Then('A user should be able to login in successsfully', () => {
+Then('A user should be able to login successsfully', () => {
     supportFunctions.loginUser(credentials);
 });
 
 
-Then('A user should be able to logout in successsfully', () => {
+Then('A user should be able to logout successsfully', () => {
     supportFunctions.logoutUser();
 });
 

@@ -6,9 +6,9 @@ const userUrl = 'https://petstore.swagger.io/v2/user'
 
 class supportFuctions {
 
-    createNewUser(dataTable) {
+    async createNewUser(dataTable) {
         const data = dataTable.hashes();
-        axios.post(userUrl, {
+        await axios.post(userUrl, {
                 "id": data[0].id,
                 "username": data[0].username,
                 "firstName": data[0].firstName,
@@ -44,8 +44,8 @@ class supportFuctions {
             })
     }
 
-    emailUpdate(email, username, credentials) {
-        axios.put(userUrl + "/" + username, {
+    async emailUpdate(email, username, credentials) {
+        await axios.put(userUrl + "/" + username, {
                 "id": credentials[0].id,
                 "username": credentials[0].username,
                 "firstName": credentials[0].firstName,
@@ -64,8 +64,8 @@ class supportFuctions {
             })
     }
 
-    checkEmailUpdate(email, credentials) {
-        axios.get(userUrl + "/" + credentials[0].username)
+    async checkEmailUpdate(email, credentials) {
+        await axios.get(userUrl + "/" + credentials[0].username)
             .then(function(response) {
                 assert(response.status, 200)
                 assert(response.data.id, credentials[0].id)
@@ -82,7 +82,7 @@ class supportFuctions {
             })
     }
 
-    loginUser(credentials) {
+    async loginUser(credentials) {
 
         let username = credentials[0].username
         let password = credentials[0].password

@@ -14,8 +14,8 @@ Feature: API requests
         When A user updates email: "testmail123@gmail.com" for the user: "Laza123"
         Then A new email: "testmail123@gmail.com" should be updated
 
-        Then A user should be able to login in successsfully
+        Then A user should be able to login successsfully
 
-        Then A user should be able to logout in successsfully
+        Then A user should be able to logout successsfully
 
         Then A user should be able to delete user by username: "Laza123"       
