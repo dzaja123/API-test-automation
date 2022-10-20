@@ -11,14 +11,11 @@ Feature: API requests
 
         Then A new user "Laza123" should be created
 
-        #When A user updates email: "testmail@gmail.com" for the user: "Lazar"
-        #Then A new email: "testmail@gmail.com" should be updated
+        When A user updates email: "testmail123@gmail.com" for the user: "Laza123"
+        Then A new email: "testmail123@gmail.com" should be updated
 
-        #When A user tries to login
-        #Then A user should be logged in successsfully
+        Then A user should be able to login in successsfully
 
-        #When A user tries to logout
-        #Then A user should be logged out successfully
+        Then A user should be able to logout in successsfully
 
-        #When A user tries to delete user by username "Lazar"
-        #Then A user with username: "Lazar" should be deleted       
+        Then A user should be able to delete user by username: "Laza123"       

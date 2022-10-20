@@ -11,46 +11,32 @@ Given('Request for creating new user is sent', (dataTable) => {
 
 
 Then('A new user {string} should be created', async(username) => {
-    await supportFunctions.checkUserByUsername(username, credentials);
+    await supportFunctions.getUserByUsername(username, credentials);
 
 });
 
 
 When('A user updates email: {string} for the user: {string}', (email, username) => {
-    supportFunctions.emailUpdate(email, username);
+    supportFunctions.emailUpdate(email, username, credentials);
 });
 
 
 Then('A new email: {string} should be updated', (email) => {
-
+    supportFunctions.checkEmailUpdate(email, credentials);
 });
 
 
-When('A user tries to login', () => {
-
+Then('A user should be able to login in successsfully', () => {
+    supportFunctions.loginUser(credentials);
 });
 
 
-Then('A user should be logged in successsfully', () => {
-
+Then('A user should be able to logout in successsfully', () => {
+    supportFunctions.logoutUser();
 });
 
 
-When('A user tries to logout', () => {
-
-});
-
-
-Then('A user should be logged out successfully', () => {
-
-});
-
-
-When('A user tries to delete user by username {string}', (username) => {
+Then('A user should be able to delete user by username: {string}', (username) => {
     supportFunctions.deleteUser(username);
 });
 
-
-Then('A user with username: {string} should be deleted', (username) => {
-
-});

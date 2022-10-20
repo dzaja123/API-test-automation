@@ -26,7 +26,7 @@ class supportFuctions {
             })
     }
 
-    async checkUserByUsername(username, credentials) {
+    async getUserByUsername(username, credentials) {
         await axios.get(userUrl + "/" + username)
             .then(function(response) {
                 assert(response.status, 200)
@@ -44,52 +44,75 @@ class supportFuctions {
             })
     }
 
-    emailUpdate(email, username) {
+    emailUpdate(email, username, credentials) {
         axios.put(userUrl + "/" + username, {
-                "id": 12,
-                "username": "Laza123",
-                "firstName": "Lazar",
-                "lastName": "Maric",
+                "id": credentials[0].id,
+                "username": credentials[0].username,
+                "firstName": credentials[0].firstName,
+                "lastName": credentials[0].lastName,
                 "email": email,
-                "password": "laza",
-                "phone": "061123122",
-                "userStatus": 1
+                "password": credentials[0].password,
+                "phone": credentials[0].phone,
+                "userStatus": credentials[0].userStatus
             })
             .then(function(response) {
-                //console.log(response);
+                assert(response.status, 200)
+
             })
             .catch(function(error) {
-                //console.log(error);
+                console.log(error);
             })
     }
 
-    login(username, password) {
+    checkEmailUpdate(email, credentials) {
+        axios.get(userUrl + "/" + credentials[0].username)
+            .then(function(response) {
+                assert(response.status, 200)
+                assert(response.data.id, credentials[0].id)
+                assert(response.data.username, credentials[0].username)
+                assert(response.data.firstName, credentials[0].firstName)
+                assert(response.data.lastName, credentials[0].lastName)
+                assert(response.data.email, email)
+                assert(response.data.password, credentials[0].password)
+                assert(response.data.phone, credentials[0].phone)
+                assert(response.data.userStatus, credentials[0].userStatus)
+            })
+            .catch(function(error) {
+                console.log(error);
+            })
+    }
+
+    loginUser(credentials) {
+
+        let username = credentials[0].username
+        let password = credentials[0].password
+
         axios.get(userUrl + "/" + "login?username=" + username + "&" + "password" + "=" + password)
             .then(function(response) {
-                //console.log(response);
+                assert(response.status, 200)
             })
             .catch(function(error) {
-                //console.log(error);
+                console.log(error);
             })
     }
 
-    logout() {
+    logoutUser() {
         axios.get(userUrl + "/" + "logout")
             .then(function(response) {
-                //console.log(response);
+                assert(response.status, 200)
             })
             .catch(function(error) {
-                //console.log(error);
+                console.log(error);
             })
     }
 
     deleteUser(username) {
         axios.delete(userUrl + "/" + username, {})
             .then(function(response) {
-                //console.log(response);
+                assert(response.status, 200)
             })
             .catch(function(error) {
-                //console.log(error);
+                console.log(error);
             })
     }
 }
