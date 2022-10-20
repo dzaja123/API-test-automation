@@ -2,15 +2,17 @@ const { Given, When, Then, And } = require('cucumber');
 
 const supportFunctions = require('../../support/supportFunctions');
 
+let credentials;
 
-
-Given('Request for creating new user is sent', () => {
-    supportFunctions.createNewUser(12, "Laza123", "Lazar", "Maric", "email@gmail.com", "laza", "061123122", 1);
+Given('Request for creating new user is sent', (dataTable) => {
+    credentials = dataTable.hashes();
+    supportFunctions.createNewUser(dataTable);
 });
 
 
-Then('A new user {string} should be created', (username) => {
-    supportFunctions.checkUserByUsername(username);
+Then('A new user {string} should be created', async(username) => {
+    await supportFunctions.checkUserByUsername(username, credentials);
+
 });
 
 
