@@ -26,17 +26,17 @@ Then('A new email: {string} should be updated', async(email) => {
 });
 
 
-Then('A user should be able to login successsfully', () => {
-    supportFunctions.loginUser(credentials);
+Then('A user should be able to login successsfully', async() => {
+    await supportFunctions.loginUser(credentials);
 });
 
 
-Then('A user should be able to logout successsfully', () => {
-    supportFunctions.logoutUser();
+Then('A user should be able to logout successsfully', async() => {
+    await supportFunctions.logoutUser();
 });
 
 
-Then('A user should be able to delete user by username: {string}', (username) => {
-    supportFunctions.deleteUser(username);
+Then('A user should be able to delete user by username: {string}', async(username) => {
+    await supportFunctions.deleteUser(username);
 });
 

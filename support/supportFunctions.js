@@ -87,7 +87,7 @@ class supportFuctions {
         let username = credentials[0].username
         let password = credentials[0].password
 
-        axios.get(userUrl + "/" + "login?username=" + username + "&" + "password" + "=" + password)
+        await axios.get(userUrl + "/" + "login?username=" + username + "&" + "password" + "=" + password)
             .then(function(response) {
                 assert(response.status, 200)
             })
@@ -96,8 +96,8 @@ class supportFuctions {
             })
     }
 
-    logoutUser() {
-        axios.get(userUrl + "/" + "logout")
+    async logoutUser() {
+        await axios.get(userUrl + "/" + "logout")
             .then(function(response) {
                 assert(response.status, 200)
             })
@@ -106,8 +106,8 @@ class supportFuctions {
             })
     }
 
-    deleteUser(username) {
-        axios.delete(userUrl + "/" + username, {})
+    async deleteUser(username) {
+        await axios.delete(userUrl + "/" + username, {})
             .then(function(response) {
                 assert(response.status, 200)
             })
