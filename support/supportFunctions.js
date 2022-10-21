@@ -23,7 +23,7 @@ class supportFuctions {
             })
             .then(function(response) {
                 //console.log((response.status).should.be.equal(200))
-                (response.status).should.be.equal(200)
+                response.status.should.be.equal(200)
             })
             .catch(function(error) {
                 throw new Error(
@@ -35,15 +35,15 @@ class supportFuctions {
     async getUserByUsername(username, credentials) {
         await axios.get(userUrl + "/" + username)
             .then(function(response) {
-                assert(response.status, 200)
-                assert(response.data.id, credentials[0].id)
-                assert(response.data.username, credentials[0].username)
-                assert(response.data.firstName, credentials[0].firstName)
-                assert(response.data.lastName, credentials[0].lastName)
-                assert(response.data.email, credentials[0].email)
-                assert(response.data.password, credentials[0].password)
-                assert(response.data.phone, credentials[0].phone)
-                assert(response.data.userStatus, credentials[0].userStatus)
+                response.status.should.be.equal(200)
+                response.data.id.should.be.equal(parseInt(credentials[0].id))
+                response.data.username.should.be.equal(credentials[0].username)
+                response.data.firstName.should.be.equal(credentials[0].firstName)
+                response.data.lastName.should.be.equal(credentials[0].lastName)
+                response.data.email.should.be.equal(credentials[0].email)
+                response.data.password.should.be.equal(credentials[0].password)
+                response.data.phone.should.be.equal(credentials[0].phone)
+                response.data.userStatus.should.be.equal(parseInt(credentials[0].userStatus))
             })
             .catch(function(error) {
                 throw new Error(
@@ -65,7 +65,7 @@ class supportFuctions {
             })
             .then(function(response) {
                 //console.log((response.status).should.be.equal(200))
-                (response.status).should.be.equal(200)
+                response.status.should.be.equal(200)
 
             })
             .catch(function(error) {
@@ -78,15 +78,15 @@ class supportFuctions {
     async checkEmailUpdate(email, credentials) {
         await axios.get(userUrl + "/" + credentials[0].username)
             .then(function(response) {
-                assert(response.status, 200)
-                assert(response.data.id, credentials[0].id)
-                assert(response.data.username, credentials[0].username)
-                assert(response.data.firstName, credentials[0].firstName)
-                assert(response.data.lastName, credentials[0].lastName)
-                assert(response.data.email, email)
-                assert(response.data.password, credentials[0].password)
-                assert(response.data.phone, credentials[0].phone)
-                assert(response.data.userStatus, credentials[0].userStatus)
+                response.status.should.be.equal(200)
+                response.data.id.should.be.equal(parseInt(credentials[0].id))
+                response.data.username.should.be.equal(credentials[0].username)
+                response.data.firstName.should.be.equal(credentials[0].firstName)
+                response.data.lastName.should.be.equal(credentials[0].lastName)
+                response.data.email.should.be.equal(email)
+                response.data.password.should.be.equal(credentials[0].password)
+                response.data.phone.should.be.equal(credentials[0].phone)
+                response.data.userStatus.should.be.equal(parseInt(credentials[0].userStatus))
             })
             .catch(function(error) {
                 throw new Error(
@@ -103,7 +103,7 @@ class supportFuctions {
         await axios.get(userUrl + "/" + "login?username=" + username + "&" + "password" + "=" + password)
             .then(function(response) {
                 //console.log((response.status).should.be.equal(200))
-                (response.status).should.be.equal(200)
+                response.status.should.be.equal(200)
             })
             .catch(function(error) {
                 throw new Error(
@@ -116,7 +116,7 @@ class supportFuctions {
         await axios.get(userUrl + "/" + "logout")
             .then(function(response) {
                 //console.log((response.status).should.be.equal(200))
-                (response.status).should.be.equal(200)
+                response.status.should.be.equal(200)
             })
             .catch(function(error) {
                 throw new Error(
@@ -129,7 +129,7 @@ class supportFuctions {
         await axios.delete(userUrl + "/" + username, {})
             .then(function(response) {
                 //console.log((response.status).should.be.equal(200))
-                (response.status).should.be.equal(200)
+                response.status.should.be.equal(200)
             })
             .catch(function(error) {
                 throw new Error(
@@ -137,6 +137,21 @@ class supportFuctions {
                 );
             })
     }
+
+    async getDeletedUser(username) {
+        await axios.get(userUrl + "/" + username)
+            .then(function(response) {
+                throw new Error(
+                    `User exists, error: ${response.data}}`,
+                );
+
+            })
+            .catch(function(error) {
+                //console.log(error.response.data.message)
+                error.response.status.should.be.equal(404)
+                error.response.data.message.should.be.equal("User not found")
+            })
+    }    
 }
 
 module.exports = new supportFuctions();

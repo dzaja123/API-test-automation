@@ -19,3 +19,5 @@ Feature: API requests
         Then A user should be able to logout successsfully
 
         Then A user should be able to delete user by username: "Laza123"       
+
+        Then A user: "Laza123" should be deleted

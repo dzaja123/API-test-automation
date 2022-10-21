@@ -40,3 +40,7 @@ Then('A user should be able to delete user by username: {string}', async(usernam
     await supportFunctions.deleteUser(username);
 });
 
+
+Then('A user: {string} should be deleted', async(username) => {
+    await supportFunctions.getDeletedUser(username);
+});
