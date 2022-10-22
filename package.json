@@ -1,33 +1,32 @@
 {
-  "name": "endava-praksa",
-  "version": "1.0.0",
-  "description": "cypress, Axios, QA, automation",
-  "scripts": {
-    "test": "cucumber-js e2e/features/ -r e2e/step_definitions/ "
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/dzaja123/API-test-automation.git"
-  },
-  "keywords": [
-    "API"
-  ],
-  "author": "dzaja123",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/dzaja123/API-test-automation/issues"
-  },
-  "homepage": "https://github.com/dzaja123/API-test-automation#readme",
-  "devDependencies": {
-    "esbuild": "^0.15.10",
-    "multiple-cucumber-html-reporter": "^3.0.1"
-  },
-  "dependencies": {
-    "assert": "^2.0.0",
-    "axios": "^0.21.4",
-    "chai": "^4.3.6",
-    "cucumber": "^6.0.7",
-    "i": "^0.3.7"
-  },
-  "main": "index.js"
+    "name": "endava-praksa",
+    "version": "1.0.0",
+    "description": "cypress, Axios, QA, automation",
+    "scripts": {
+        "test": "cucumber-js e2e/features/ -r e2e/step_definitions/ "
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/dzaja123/API-test-automation.git"
+    },
+    "keywords": [
+        "API"
+    ],
+    "author": "dzaja123",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/dzaja123/API-test-automation/issues"
+    },
+    "homepage": "https://github.com/dzaja123/API-test-automation#readme",
+    "devDependencies": {
+        "cucumber": "^6.0.7",
+        "esbuild": "^0.15.10"
+    },
+    "dependencies": {
+        "assert": "^2.0.0",
+        "axios": "^0.21.4",
+        "chai": "^4.3.6",
+        "i": "^0.3.7"
+    },
+    "main": "index.js"
 }

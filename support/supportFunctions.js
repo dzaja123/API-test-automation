@@ -1,6 +1,4 @@
 const axios = require('axios').default;
-const assert = require('assert');
-
 const chai = require('chai');
 const should = chai.should()
 
@@ -151,7 +149,7 @@ class supportFuctions {
                 error.response.status.should.be.equal(404)
                 error.response.data.message.should.be.equal("User not found")
             })
-    }    
+    }
 }
 
 module.exports = new supportFuctions();
