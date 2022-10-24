@@ -77,12 +77,7 @@ class supportFuctions {
                 response.status.should.be.equal(200)
                 response.data.id.should.be.equal(parseInt(credentials[0].id))
                 response.data.username.should.be.equal(credentials[0].username)
-                response.data.firstName.should.be.equal(credentials[0].firstName)
-                response.data.lastName.should.be.equal(credentials[0].lastName)
                 response.data.email.should.be.equal(email)
-                response.data.password.should.be.equal(credentials[0].password)
-                response.data.phone.should.be.equal(credentials[0].phone)
-                response.data.userStatus.should.be.equal(parseInt(credentials[0].userStatus))
             })
             .catch(function(error) {
                 throw new Error(
