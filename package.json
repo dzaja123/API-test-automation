@@ -1,7 +1,7 @@
 {
     "name": "endava-praksa",
     "version": "1.0.0",
-    "description": "cypress, Axios, QA, automation",
+    "description": "Axios, QA, automation",
     "scripts": {
         "test": "cucumber-js e2e/features/ -r e2e/step_definitions/ --format json:report/cucumber_report.json"
     },

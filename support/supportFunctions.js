@@ -20,7 +20,6 @@ class supportFuctions {
                 "userStatus": data[0].userStatus
             })
             .then(function(response) {
-                //console.log((response.status).should.be.equal(200))
                 response.status.should.be.equal(200)
             })
             .catch(function(error) {
@@ -62,7 +61,6 @@ class supportFuctions {
                 "userStatus": credentials[0].userStatus
             })
             .then(function(response) {
-                //console.log((response.status).should.be.equal(200))
                 response.status.should.be.equal(200)
 
             })
@@ -100,7 +98,6 @@ class supportFuctions {
 
         await axios.get(userUrl + "/" + "login?username=" + username + "&" + "password" + "=" + password)
             .then(function(response) {
-                //console.log((response.status).should.be.equal(200))
                 response.status.should.be.equal(200)
             })
             .catch(function(error) {
@@ -113,7 +110,6 @@ class supportFuctions {
     async logoutUser() {
         await axios.get(userUrl + "/" + "logout")
             .then(function(response) {
-                //console.log((response.status).should.be.equal(200))
                 response.status.should.be.equal(200)
             })
             .catch(function(error) {
@@ -126,7 +122,6 @@ class supportFuctions {
     async deleteUser(username) {
         await axios.delete(userUrl + "/" + username, {})
             .then(function(response) {
-                //console.log((response.status).should.be.equal(200))
                 response.status.should.be.equal(200)
             })
             .catch(function(error) {
@@ -145,7 +140,6 @@ class supportFuctions {
 
             })
             .catch(function(error) {
-                //console.log(error.response.data.message)
                 error.response.status.should.be.equal(404)
                 error.response.data.message.should.be.equal("User not found")
             })

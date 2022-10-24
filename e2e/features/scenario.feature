@@ -6,8 +6,8 @@ Feature: API requests
 
         Given Request for creating new user is sent
 
-        |  id  |  username  |  firstName  |  lastName  |  email  |  password  |  phone  |  userStatus  |
-        |  12  |  Laza123  |  Lazar  |  Maric  |  testmail@gmail.com  |  laza123  |  02566665  |  2  |
+        |  id  |  username  |  firstName  |  lastName  |         email        |  password  |    phone   |  userStatus  |
+        |  12  |   Laza123  |    Lazar    |    Maric   |  testmail@gmail.com  |   laza123  |  02566665  |       2      |
 
         Then A new user "Laza123" should be created
 
