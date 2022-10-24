@@ -10,3 +10,12 @@ On the server-side it uses the native node.js HTTP module, while on the client (
 ```shell
 npm install axios
 ```
+
+## Report generating
+
+Generating HTML reports is done with command: 
+
+```shell
+node index.js
+```
+

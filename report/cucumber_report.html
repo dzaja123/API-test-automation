@@ -279,8 +279,8 @@ pre {
           <a class="navbar-brand">Cucumberjs Report</a>
           <div class="project-name visible-md visible-lg">endava-praksa</div>
           <div class="label-container">
-            <span class="label label-success" onclick="toggle('.feature-passed')" title=scenarios>Passed: 1</span>
-            <span class="label label-danger" onclick="toggle('.feature-failed')" title=scenarios>Failed: 0</span>
+            <span class="label label-success" onclick="toggle('.feature-passed')" title=scenarios>Passed: 0</span>
+            <span class="label label-danger" onclick="toggle('.feature-failed')" title=scenarios>Failed: 1</span>
           </div>
         </div>
       </div>
@@ -288,7 +288,7 @@ pre {
 
     <div class="container">
 
-      <div class="generated-on">Mon Oct 24 2022 11:22:11 GMT+0200 (Central European Summer Time)</div>
+      <div class="generated-on">Mon Oct 24 2022 17:13:54 GMT+0200 (Central European Summer Time)</div>
 
       <div class="row">
         <div class="chart col-lg-6 col-md-6" id="piechart_features"></div>
@@ -303,7 +303,7 @@ pre {
 <div class="row" xmlns="http://www.w3.org/1999/html">
 
 
-<div class="feature-passed">
+<div class="feature-failed">
 
     <div class="col-lg-6 col-md-6">
         <div class="panel panel-default">
@@ -313,14 +313,14 @@ pre {
                     <div class="tags">
                     </div>
                     
-                    <a data-toggle="collapse" href="#collapseFeatureendava_praksa7c548575-fad4-4882-a283-0c774242384c">
+                    <a data-toggle="collapse" href="#collapseFeatureendava_praksae1860a6d-4359-423c-8616-5773cab57add">
                         <i class="glyphicon glyphicon-chevron-right"></i>
                         <i class="glyphicon glyphicon-chevron-down"></i>
                         <b>Feature:</b>API requests
                         <span class="label-container">
-              <span class="label label-success"
-                                                         title="1 Scenarios Passed">1</span>
               
+              <span class="label label-danger"
+                                                         title="1 Scenarios Failed">1</span>
               
               
               
@@ -329,7 +329,7 @@ pre {
                     </a>
                 </h4>
             </div>
-            <div id="collapseFeatureendava_praksa7c548575-fad4-4882-a283-0c774242384c" class="panel-collapse collapse">
+            <div id="collapseFeatureendava_praksae1860a6d-4359-423c-8616-5773cab57add" class="panel-collapse collapse">
                 <div class="panel-body">
                     
                     <div class="description">    Testing API requests</div>
@@ -344,22 +344,23 @@ pre {
                                 <div class="tags">
                                 </div>
                                 
-                                <a data-toggle="collapse" href="#collapseScenarioendava_praksaeef56086-0ffd-4307-bf5d-5687a38314ec">
+                                <a data-toggle="collapse" href="#collapseScenarioendava_praksa1f5c358b-0952-49eb-ad94-15dbbb28fe30">
                                     <div>
 
-                                        <div style="padding-right: 30px">
+                                        <div style="padding-right: 50px">
                                             <i class="glyphicon glyphicon-chevron-right"></i>
                                             <i class="glyphicon glyphicon-chevron-down"></i>
                                             <b>Scenario:</b>API tests
                                         </div>
                                         <div>
                             <span class="label-container">
-                              <span class="label label-success"
-                                                               title="8 Steps Passed">8</span>
                               
                               
                               
-                              
+                              <span class="label label-warning"
+                                                                title="7 Steps Skipped">7</span>
+                              <span class="label label-danger"
+                                                               title="1 Steps Failed">1</span>
                               
                             </span>
                                         </div>
@@ -368,7 +369,7 @@ pre {
                                 </a>
                             </h4>
                         </div>
-                        <div id="collapseScenarioendava_praksaeef56086-0ffd-4307-bf5d-5687a38314ec"
+                        <div id="collapseScenarioendava_praksa1f5c358b-0952-49eb-ad94-15dbbb28fe30"
                              class="panel-collapse collapse">
                             <div class="panel-body">
                                 <div></div>
@@ -379,8 +380,8 @@ pre {
                                 <div class="row steps">
                                     
                                     
-                                    <span class="label label-success" title="Success"><i
-                                            class="glyphicon glyphicon-ok"></i></span>
+                                    <span class="label label-danger" title="Failed"><i
+                                            class="glyphicon glyphicon-remove"></i></span>
                                     
                                     
                                     <span class="text">
@@ -389,7 +390,7 @@ pre {
                             
                           
                               <span class="step-duration">
-                               568ms
+                               587ms
                               </span>
                             
                          
@@ -486,6 +487,54 @@ pre {
                                 
 
                                     
+                                    <a href="#error0_00"
+                                       data-toggle="collapse" class="toggle">Show Error +</a>
+                                    <div id="error0_00"
+                                         class="collapse">
+                                        <pre class="info show-modal"
+                                             data-toggle="modal"
+                                             style="cursor: pointer"
+                                             data-target="#error-modal-0_00">
+                                            <br> Error: Cannot post, error: expected 200 to equal 300}
+    at C:\Users\Dzaja-PC\Documents\GitHub\API-test-automation\support\supportFunctions.js:26:23
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async supportFuctions.createNewUser (C:\Users\Dzaja-PC\Documents\GitHub\API-test-automation\support\supportFunctions.js:12:9)
+    at async World.(anonymous) (C:\Users\Dzaja-PC\Documents\GitHub\API-test-automation\e2e\step_definitions\scenario.js:9:5)</pre>
+                                    </div>
+
+                                <div class="modal fade" id="error-modal-0_00" tabindex="-1" role="dialog"
+                                     aria-labelledby="stacktraceModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog modal-lg">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <button type="button" class="close" data-dismiss="modal"
+                                                        aria-label="Close"><span aria-hidden="true">&times;</span>
+                                                </button>
+                                                <h4 class="modal-title" id="error-modal-title">
+                                                    Error
+                                                </h4>
+                                            </div>
+                                            <div class="modal-body">
+                                                <h5>
+                                                    <pre><br>Error: Cannot post, error: expected 200 to equal 300}
+    at C:\Users\Dzaja-PC\Documents\GitHub\API-test-automation\support\supportFunctions.js:26:23
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async supportFuctions.createNewUser (C:\Users\Dzaja-PC\Documents\GitHub\API-test-automation\support\supportFunctions.js:12:9)
+    at async World.(anonymous) (C:\Users\Dzaja-PC\Documents\GitHub\API-test-automation\e2e\step_definitions\scenario.js:9:5)</pre>
+                                                </h5>
+                                            </div>
+
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-default" data-dismiss="modal">
+                                                    Close
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                    
 
                                     
 
@@ -501,8 +550,8 @@ pre {
                                 <div class="row steps">
                                     
                                     
-                                    <span class="label label-success" title="Success"><i
-                                            class="glyphicon glyphicon-ok"></i></span>
+                                    <span class="label label-warning" title="Skipped"><i
+                                            class="glyphicon glyphicon-minus"></i></span>
                                     
                                     
                                     <span class="text">
@@ -511,7 +560,7 @@ pre {
                             
                           
                               <span class="step-duration">
-                               497ms
+                               0s
                               </span>
                             
                          
@@ -539,8 +588,8 @@ pre {
                                 <div class="row steps">
                                     
                                     
-                                    <span class="label label-success" title="Success"><i
-                                            class="glyphicon glyphicon-ok"></i></span>
+                                    <span class="label label-warning" title="Skipped"><i
+                                            class="glyphicon glyphicon-minus"></i></span>
                                     
                                     
                                     <span class="text">
@@ -549,7 +598,7 @@ pre {
                             
                           
                               <span class="step-duration">
-                               376ms
+                               0s
                               </span>
                             
                          
@@ -577,8 +626,8 @@ pre {
                                 <div class="row steps">
                                     
                                     
-                                    <span class="label label-success" title="Success"><i
-                                            class="glyphicon glyphicon-ok"></i></span>
+                                    <span class="label label-warning" title="Skipped"><i
+                                            class="glyphicon glyphicon-minus"></i></span>
                                     
                                     
                                     <span class="text">
@@ -587,7 +636,7 @@ pre {
                             
                           
                               <span class="step-duration">
-                               347ms
+                               0s
                               </span>
                             
                          
@@ -615,8 +664,8 @@ pre {
                                 <div class="row steps">
                                     
                                     
-                                    <span class="label label-success" title="Success"><i
-                                            class="glyphicon glyphicon-ok"></i></span>
+                                    <span class="label label-warning" title="Skipped"><i
+                                            class="glyphicon glyphicon-minus"></i></span>
                                     
                                     
                                     <span class="text">
@@ -625,7 +674,7 @@ pre {
                             
                           
                               <span class="step-duration">
-                               362ms
+                               0s
                               </span>
                             
                          
@@ -653,8 +702,8 @@ pre {
                                 <div class="row steps">
                                     
                                     
-                                    <span class="label label-success" title="Success"><i
-                                            class="glyphicon glyphicon-ok"></i></span>
+                                    <span class="label label-warning" title="Skipped"><i
+                                            class="glyphicon glyphicon-minus"></i></span>
                                     
                                     
                                     <span class="text">
@@ -663,7 +712,7 @@ pre {
                             
                           
                               <span class="step-duration">
-                               381ms
+                               0s
                               </span>
                             
                          
@@ -691,8 +740,8 @@ pre {
                                 <div class="row steps">
                                     
                                     
-                                    <span class="label label-success" title="Success"><i
-                                            class="glyphicon glyphicon-ok"></i></span>
+                                    <span class="label label-warning" title="Skipped"><i
+                                            class="glyphicon glyphicon-minus"></i></span>
                                     
                                     
                                     <span class="text">
@@ -701,7 +750,7 @@ pre {
                             
                           
                               <span class="step-duration">
-                               372ms
+                               0s
                               </span>
                             
                          
@@ -729,8 +778,8 @@ pre {
                                 <div class="row steps">
                                     
                                     
-                                    <span class="label label-success" title="Success"><i
-                                            class="glyphicon glyphicon-ok"></i></span>
+                                    <span class="label label-warning" title="Skipped"><i
+                                            class="glyphicon glyphicon-minus"></i></span>
                                     
                                     
                                     <span class="text">
@@ -739,7 +788,7 @@ pre {
                             
                           
                               <span class="step-duration">
-                               348ms
+                               0s
                               </span>
                             
                          
@@ -799,8 +848,8 @@ pre {
         google.load("visualization", "1", {packages: ["corechart"]});
         google.setOnLoadCallback(function() {drawChart({
                                                             "title" : "Features",
-                                                            "failed" : 0,
-                                                            "passed" : 1,
+                                                            "failed" : 1,
+                                                            "passed" : 0,
                                                             "notdefined" : 0,
                                                             "pending" : 0,
                                                             "skipped" : 0,
@@ -809,8 +858,8 @@ pre {
                                             });
         google.setOnLoadCallback(function() {drawChart({
                                                             "title" : "Scenarios",
-                                                            "failed" : 0,
-                                                            "passed" : 1,
+                                                            "failed" : 1,
+                                                            "passed" : 0,
                                                             "notdefined" : 0,
                                                             "pending" : 0,
                                                             "skipped" : 0,
