@@ -3,7 +3,7 @@
     "version": "1.0.0",
     "description": "cypress, Axios, QA, automation",
     "scripts": {
-        "test": "cucumber-js e2e/features/ -r e2e/step_definitions/ "
+        "test": "cucumber-js e2e/features/ -r e2e/step_definitions/ --format json:report/cucumber_report.json"
     },
     "repository": {
         "type": "git",
@@ -20,6 +20,7 @@
     "homepage": "https://github.com/dzaja123/API-test-automation#readme",
     "devDependencies": {
         "cucumber": "^6.0.7",
+        "cucumber-html-reporter": "^5.5.0",
         "esbuild": "^0.15.10"
     },
     "dependencies": {
