@@ -11,11 +11,26 @@ On the server-side it uses the native node.js HTTP module, while on the client (
 npm install axios
 ```
 
-## Report generating
+## Usage
 
-Generating HTML reports is done with command: 
+### Test runing
 
 ```shell
-node index.js
+npm run test
 ```
+
+### Test run and report generating
+
+```shell
+npm run report
+```
+
+### Report folder remove
+
+After report generating, delete the report folder with command:
+
+```shell
+npm run delete
+```
+
 
