@@ -3,7 +3,9 @@
     "version": "1.0.0",
     "description": "Axios, QA, automation",
     "scripts": {
-        "test": "cucumber-js e2e/features/ -r e2e/step_definitions/ --format json:report/cucumber_report.json"
+        "test": "npm run create && cucumber-js e2e/features/ -r e2e/step_definitions/ --format json:report/cucumber_report.json",
+        "create": "mkdir report",
+        "delete": "rm -r report"
     },
     "repository": {
         "type": "git",
