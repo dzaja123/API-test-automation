@@ -24,7 +24,7 @@ class supportFuctions {
             })
             .catch(function(error) {
                 throw new Error(
-                    `Cannot post, error: ${error.message}}`,
+                    `Cannot create new user, error: ${error.message}}`,
                 );
             })
     }
@@ -44,7 +44,7 @@ class supportFuctions {
             })
             .catch(function(error) {
                 throw new Error(
-                    `Cannot get, error: ${error.message}}`,
+                    `Cannot get user by username ${username}, error: ${error.message}}`,
                 );
             })
     }
@@ -66,7 +66,7 @@ class supportFuctions {
             })
             .catch(function(error) {
                 throw new Error(
-                    `Cannot put, error: ${error.message}}`,
+                    `Cannot update email for user ${username}, error: ${error.message}}`,
                 );
             })
     }
@@ -81,7 +81,7 @@ class supportFuctions {
             })
             .catch(function(error) {
                 throw new Error(
-                    `Cannot get, error: ${error.message}}`,
+                    `Cannot get email for user ${username}, error: ${error.message}}`,
                 );
             })
     }
@@ -97,7 +97,7 @@ class supportFuctions {
             })
             .catch(function(error) {
                 throw new Error(
-                    `Cannot get, error: ${error.message}}`,
+                    `Cannot login user ${username}, error: ${error.message}}`,
                 );
             })
     }
@@ -109,7 +109,7 @@ class supportFuctions {
             })
             .catch(function(error) {
                 throw new Error(
-                    `Cannot get, error: ${error.message}}`,
+                    `Cannot logout user ${username}, error: ${error.message}}`,
                 );
             })
     }
@@ -121,7 +121,7 @@ class supportFuctions {
             })
             .catch(function(error) {
                 throw new Error(
-                    `Cannot delete, error: ${error.message}}`,
+                    `Cannot delete user ${username}, error: ${error.message}}`,
                 );
             })
     }
