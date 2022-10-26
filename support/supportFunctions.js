@@ -109,7 +109,7 @@ class supportFuctions {
             })
             .catch(function(error) {
                 throw new Error(
-                    `Cannot logout user ${username}, error: ${error.message}}`,
+                    `Cannot logout user, error: ${error.message}}`,
                 );
             })
     }
