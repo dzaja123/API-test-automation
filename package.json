@@ -1,9 +1,12 @@
 {
     "name": "endava-praksa",
     "version": "1.0.0",
-    "description": "cypress, QA, automation",
+    "description": "Axios, QA, automation",
     "scripts": {
-        "test": "cypress run"
+        "test": "cucumber-js e2e/features/ -r e2e/step_definitions/",
+        "report": "npm run create && cucumber-js e2e/features/ -r e2e/step_definitions/ --format json:report/cucumber_report.json && node index.js",
+        "create": "mkdir report",
+        "delete": "rm -r report"
     },
     "repository": {
         "type": "git",
@@ -19,10 +22,15 @@
     },
     "homepage": "https://github.com/dzaja123/API-test-automation#readme",
     "devDependencies": {
-        "esbuild": "^0.15.10",
-        "multiple-cucumber-html-reporter": "^3.0.1"
+        "cucumber": "^6.0.7",
+        "cucumber-html-reporter": "^5.5.0",
+        "esbuild": "^0.15.10"
     },
     "dependencies": {
-        "axios": "^1.1.3"
-    }
+        "assert": "^2.0.0",
+        "axios": "^0.21.4",
+        "chai": "^4.3.6",
+        "i": "^0.3.7"
+    },
+    "main": "index.js"
 }
